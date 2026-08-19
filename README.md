@@ -42,10 +42,10 @@ dns_client: ^1.3.1
 
 ```yaml
 dependencies:
-    rz_library_utilities:
-        git:
-        url: https://github.com/rzrasel/plugins-flutter-rz-library-utilities.git
-        ref: v1.0.0
+  rz_library_utilities:
+    git:
+      url: https://github.com/rzrasel/plugins-flutter-rz-library-utilities.git
+      ref: vref-1.0.1
 ```
 
 Import:
