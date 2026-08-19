@@ -36,6 +36,11 @@ A lightweight Flutter utility library by [rzrasel](https://github.com/rzrasel) f
 Add the package to your `pubspec.yaml`:
 
 ```yaml
+intl: ^0.20.3
+dns_client: ^1.3.1
+```
+
+```yaml
 dependencies:
     rz_library_utilities:
         git:
