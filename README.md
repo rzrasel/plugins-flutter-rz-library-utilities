@@ -31,7 +31,7 @@ A lightweight Flutter utility library by [rzrasel](https://github.com/rzrasel) f
 
 ![GitHub Tag](https://img.shields.io/github/v/tag/rzrasel/plugins-flutter-rz-library-utilities?label=Latest%20Tag)
 
-**Latest:** `vref-1.0.11`
+**Latest:** <kbd>vref-1.0.11</kbd>
 
 Add the package to your `pubspec.yaml`:
 
