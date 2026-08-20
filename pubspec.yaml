@@ -1,7 +1,8 @@
 name: rz_library_utilities
-description: "A new Flutter project."
-version: 0.0.1
-homepage:
+description: A powerful Flutter utility library for clean architecture - validators, extensions, mappers, JSON helpers, session handling and common reusable widgets.
+version: 1.0.0
+repository: https://github.com/rzrasel/plugins-flutter-rz-library-utilities
+homepage: https://github.com/rzrasel/plugins-flutter-rz-library-utilities
 
 publish_to: none
 
