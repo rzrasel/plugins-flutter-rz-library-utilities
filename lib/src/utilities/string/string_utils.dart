@@ -6,7 +6,7 @@ class StringUtils {
   static const StringUtils instance = StringUtils._internal();
 
   // MySQL escape
-  String? toEscapeString(String? value) {
+  static String? toEscapeString(String? value) {
     if (value == null) return null;
     return value
         .replaceAll(r'\', r'\\')
@@ -18,17 +18,17 @@ class StringUtils {
         .replaceAll('"', r'\"');
   }
 
-  String? toCollapseWhitespace(String? value, {bool strip = true}) {
+  static String? toCollapseWhitespace(String? value, {bool strip = true}) {
     if (value == null) return null;
     var collapsed = value.replaceAll(RegExp(r'\s+'), ' ');
     return strip? collapsed.trim() : collapsed;
   }
 
-  String? toNormalizeWhitespace(String? value) => toCollapseWhitespace(value, strip: true);
-  String? toSquish(String? value) => toCollapseWhitespace(value, strip: true);
-  String? toStripWhitespace(String? value) => toCollapseWhitespace(value, strip: true);
+  static String? toNormalizeWhitespace(String? value) => toCollapseWhitespace(value, strip: true);
+  static String? toSquish(String? value) => toCollapseWhitespace(value, strip: true);
+  static String? toStripWhitespace(String? value) => toCollapseWhitespace(value, strip: true);
 
-  String? toSlug(String? value, {bool lower = true, bool allowUnicode = true}) {
+  static String? toSlug(String? value, {bool lower = true, bool allowUnicode = true}) {
     if (value == null) return null;
     var v = value.trim();
     if (v.isEmpty) return "";
@@ -47,26 +47,26 @@ class StringUtils {
   }
 
   // stub - plug your translator
-  String? toSlugTranslation(String? value, {bool lower = true, bool allowUnicode = true, String toLanguage = 'en'}) {
+  static String? toSlugTranslation(String? value, {bool lower = true, bool allowUnicode = true, String toLanguage = 'en'}) {
     if (value == null) return null;
     // TODO: integrate your LanguageTranslator here
     // text = LanguageTranslator().translateTo(value, toLanguage)
     return toSlug(value, lower: lower, allowUnicode: allowUnicode);
   }
 
-  bool isEmpty(dynamic value) {
+  static bool isEmpty(dynamic value) {
     if (value == null) return true;
     if (value is String) return value.trim().isEmpty;
     if (value is List || value is Map || value is Set) return value.isEmpty;
     return false;
   }
 
-  bool isNull(dynamic value) => value == null;
+  static bool isNull(dynamic value) => value == null;
 
-  bool isAllEmpty(Iterable<dynamic> values) => values.every((v) => isEmpty(v));
-  bool isAnyEmpty(Iterable<dynamic> values) => values.any((v) => isEmpty(v));
+  static bool isAllEmpty(Iterable<dynamic> values) => values.every((v) => isEmpty(v));
+  static bool isAnyEmpty(Iterable<dynamic> values) => values.any((v) => isEmpty(v));
 
-  bool parseBool(dynamic value, {bool defaultValue = false}) {
+  static bool parseBool(dynamic value, {bool defaultValue = false}) {
     const trueSet = {'true', '1', 't', 'yes', 'y', 'on'};
     const falseSet = {'false', '0', 'f', 'no', 'n', 'off', ''};
 
@@ -86,7 +86,7 @@ class StringUtils {
     return value.toString().isNotEmpty? true : defaultValue;
   }
 
-  bool getBool(dynamic value) {
+  static bool getBool(dynamic value) {
     if (value is String) return value.trim().toLowerCase() == 'true';
     if (value is bool) return value;
     return false;

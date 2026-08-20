@@ -5,8 +5,8 @@ export 'src/log/log_writer.dart';
 export 'src/device/device_utils.dart';
 
 //
-export 'src/strings/image_string.dart';
-export 'src/strings/text_string.dart';
+export 'src/resource/image_string.dart';
+export 'src/resource/text_string.dart';
 
 //
 export 'src/utilities/date/date_utils.dart';
