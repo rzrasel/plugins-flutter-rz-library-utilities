@@ -24,5 +24,6 @@ export 'src/validation/email_or_mobile_validation.dart';
 export 'src/validation/email_validation.dart';
 export 'src/validation/mobile_validation.dart';
 export 'src/validation/password_validation.dart';
+export 'src/validation/confirm_password_validation.dart';
 export 'src/validation/username_validation.dart';
 export 'src/validation/validation.dart';
