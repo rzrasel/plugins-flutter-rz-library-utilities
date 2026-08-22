@@ -2,8 +2,9 @@
 class UsernameValidation {
 
   const UsernameValidation._();
-  const UsernameValidation._internal();
-  static const UsernameValidation instance = UsernameValidation._internal();
+  static const UsernameValidation instance = UsernameValidation._();
+  /*const UsernameValidation._internal();
+  static const UsernameValidation instance = UsernameValidation._internal();*/
 
   String? _isValid(String? value, {int min = 4, int max = 254}) {
     if (value == null || value.trim().isEmpty) {

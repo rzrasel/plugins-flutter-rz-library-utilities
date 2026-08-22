@@ -61,6 +61,8 @@ class PasswordValidation {
         bool requireDigit = true,
         bool requireSpecial = true,
       }) {
+    assert(minLength >= 0 && maxLength >= 0 && minLength <= maxLength, 'min length must be <= max length');
+
     return _isValid(
       value,
       minLength: minLength,
